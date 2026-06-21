@@ -1,4 +1,7 @@
 package com.project.orderservice.service;
 
-public class OrderServiceImple {
+import org.springframework.stereotype.Service;
+
+@Service
+public class OrderServiceImple implements OrderService{
 }

@@ -1,4 +1,4 @@
 package com.project.orderservice.dto;
 
-public class OrderDto {
+public class OrderResponseDto {
 }

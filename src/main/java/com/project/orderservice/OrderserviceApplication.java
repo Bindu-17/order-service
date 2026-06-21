@@ -8,6 +8,7 @@ public class OrderserviceApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(OrderserviceApplication.class, args);
+		System.out.println("order service project is created and pushed into github");
 	}
 
 }
