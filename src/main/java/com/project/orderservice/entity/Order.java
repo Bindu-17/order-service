@@ -1,13 +1,13 @@
 package com.project.orderservice.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.Data;
+
+import java.util.List;
 
 @Data
 @Entity
+@Table(name = "order_table")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -17,4 +17,12 @@ public class Order {
     private Integer quantity;
     private Double price;
     private String status;
+
+    @OneToMany(
+            mappedBy =  "order",
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
+    )
+    private List<OrderItem> orderItems;
+
 }
